@@ -1,13 +1,13 @@
 # SubGWAS
 
-SubGWAS is a Python library for analyzing Genome-Wide Association Study (GWAS) summary statistics and detecting novel subtypes using various clustering algorithms. This library provides a flexible and efficient way to process GWAS data, perform clustering analysis, and visualize results.
+SubGWAS is a Python library for analyzing Genome-Wide Association Study (GWAS) summary statistics and detecting novel subtypes using various machine learning and deep learning clustering algorithms. This library provides a flexible and efficient way to process GWAS data, perform clustering analysis, and visualize results.
 
 ## Features
 
 - Automatic detection of GWAS summary statistic column names
 - Preprocessing of GWAS data, including effect size computation and p-value transformation
 - Implementation of multiple clustering algorithms (K-means, DBSCAN, Gaussian Mixture Models)
-- Integration with PyTorch for GPU-accelerated computations
+- Integration with PyTorch for GPU-accelerated computations (Deep learning)
 - Visualization tools for clustering results and Manhattan plots
 - Flexible handling of additional GWAS data columns
 

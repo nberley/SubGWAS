@@ -49,15 +49,3 @@ kmeans_labels = clustering.kmeans_clustering(feature_matrix)
 plot_clusters(feature_matrix, kmeans_labels, 'K-means Clustering')
 plot_manhattan(data, 'Manhattan Plot')
 ```
-
-This README provides a comprehensive overview of the GWASCluster library, including:
-
-1. A brief description of the library and its purpose
-2. Key features
-3. Installation instructions
-4. A quick start guide with a basic usage example
-5. Links to further documentation
-6. Information on how to contribute
-7. License information
-8. Citation information for academic use
-9. Contact information for support

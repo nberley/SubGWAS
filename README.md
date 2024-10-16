@@ -1,62 +1,14 @@
-# SubGWAS
+This script provides a basic framework for some of the analyses described in the paper. 
 
-SubGWAS is a Python library for analyzing Genome-Wide Association Study (GWAS) summary statistics and detecting novel subtypes using various machine learning and deep learning clustering algorithms. This library provides a flexible and efficient way to process GWAS data, perform clustering analysis, and visualize results.
+Shigemizu, D., Akiyama, S., Suganuma, M. et al. Classification and deep-learning–based prediction of Alzheimer disease subtypes by using genomic data. Transl Psychiatry 13, 232 (2023). https://doi.org/10.1038/s41398-023-02531-1
 
-## Features
+Here's a brief explanation of each part:
 
-- Automatic detection of GWAS summary statistic column names
-- Preprocessing of GWAS data, including effect size computation and p-value transformation
-- Implementation of multiple clustering algorithms (K-means, DBSCAN, Gaussian Mixture Models)
-- Integration with PyTorch for GPU-accelerated computations (Deep learning)
-- Visualization tools for clustering results and Manhattan plots
-- Flexible handling of additional GWAS data columns
+The load_gwas_data function is a placeholder for loading GWAS data.
 
-## Installation
+The perform_logistic_regression function uses scikit-learn to perform logistic regression, which was used in the paper for association analysis.
 
-You can install SubGWAS using pip:
+The DeepNN class and train_neural_network function implement a deep neural network similar to the one described in the paper. It has six hidden layers with 512 neurons each, uses ReLU activation and dropout, and outputs probabilities for four classes (LOAD group 1, LOAD group 2, CN group 1, CN group 2).
 
-```
-pip install subgwas
-```
+The analyze_blood_markers function performs Wilcoxon rank-sum tests on blood marker data, as described in the paper.
 
-## Quick Start
-
-Here's a basic example of how to use SubGWAS:
-
-```python
-from subgwas import GWASDataLoader, GWASPreprocessor, GWASClustering
-from subgwas.visualization import plot_clusters, plot_manhattan
-
-# Load and preprocess data
-loader = GWASDataLoader('path/to/gwas_summary_stats.txt')
-data = loader.load_data()
-data = loader.filter_snps(data)
-
-preprocessor = GWASPreprocessor(data)
-preprocessor.compute_effect_sizes()
-preprocessor.compute_log_p_values()
-preprocessor.encode_chromosomes()
-preprocessor.scale_features()
-feature_matrix = preprocessor.prepare_feature_matrix()
-snp_ids = preprocessor.get_snp_ids()
-
-# Perform clustering
-clustering = GWASClustering(n_clusters=3)
-kmeans_labels = clustering.kmeans_clustering(feature_matrix)
-
-# Visualize results
-plot_clusters(feature_matrix, kmeans_labels, 'K-means Clustering')
-plot_manhattan(data, 'Manhattan Plot')
-```
-
-This README provides a comprehensive overview of the GWASCluster library, including:
-
-1. A brief description of the library and its purpose
-2. Key features
-3. Installation instructions
-4. A quick start guide with a basic usage example
-5. Links to further documentation
-6. Information on how to contribute
-7. License information
-8. Citation information for academic use
-9. Contact information for support

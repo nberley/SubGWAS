@@ -4,6 +4,7 @@ SubGWAS is a Python library for analyzing Genome-Wide Association Study (GWAS) s
 
 ## Features
 
+### TODO:
 - Automatic detection of GWAS summary statistic column names
 - Preprocessing of GWAS data, including effect size computation and p-value transformation
 - Implementation of multiple clustering algorithms (K-means, DBSCAN, Gaussian Mixture Models)

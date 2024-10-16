@@ -1,4 +1,4 @@
-This script provides a basic framework for some of the analyses described in the paper. 
+This script provides a basic framework for some of the analyses described in the following paper. 
 
 Shigemizu, D., Akiyama, S., Suganuma, M. et al. Classification and deep-learning–based prediction of Alzheimer disease subtypes by using genomic data. Transl Psychiatry 13, 232 (2023). https://doi.org/10.1038/s41398-023-02531-1
 
